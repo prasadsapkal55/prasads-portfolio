@@ -6,9 +6,9 @@ A modern, responsive personal portfolio website showcasing my projects, skills a
 [View Live Portfolio](https://prasadsapkal.netlify.app/)
 
 ## ✨ Features
-- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- **Responsive Design** - Works seamlessly on desktop, tablet and mobile devices
 - **Modern UI/UX** - Clean, professional design with smooth animations
-- **Interactive Elements** - Hover effects, scroll animations, and dynamic content
+- **Interactive Elements** - Hover effects, scroll animations and dynamic content
 - **Contact Form** - Functional contact form with EmailJS integration
 - **Certificate Carousel** - Interactive slideshow of professional certificates
 - **Project Showcase** - Detailed project cards with live demos and GitHub links
