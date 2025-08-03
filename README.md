@@ -43,10 +43,6 @@ A modern, responsive personal portfolio website showcasing my projects, skills a
 - Accessibility considerations
 - Cross-browser compatibility
 
-## 🤝 Contributing
-Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/prasadsapkal55/portfolio/issues).
-
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
