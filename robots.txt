@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prasadsapkal55.github.io/prasads-portfolio/sitemap.xml
