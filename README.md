@@ -24,8 +24,6 @@ A modern, responsive personal portfolio website showcasing my projects, skills a
 - **Form Handling**: EmailJS for contact form
 - **Deployment**: Netlify
 
-## 🚀 Quick Start
-
 ## 📱 Responsive Breakpoints
 - **Desktop**: 1600px+
 - **Laptop**: 1400px - 1599px
@@ -64,6 +62,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - DevIcons for technology icons
 - EmailJS for contact form functionality
 - Netlify for hosting
-
----
-⭐ **If you found this project helpful, please give it a star!** ⭐
