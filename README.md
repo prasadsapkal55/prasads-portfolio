@@ -3,7 +3,7 @@
 A modern, responsive personal portfolio website showcasing my projects, skills and professional experience.
 
 ## 🌐 Live Demo
-[View Live Portfolio](https://prasadsapkal.netlify.app/)
+[View Live Portfolio]<a href="https://prasadsapkal.netlify.app/" target="_blank">
 
 ## ✨ Features
 - **Responsive Design** - Works seamlessly on desktop, tablet and mobile devices
