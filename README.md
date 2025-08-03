@@ -38,13 +38,6 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
 - **Accent**: `blueviolet` - Interactive elements
 - **Text**: `white` - Primary text color
 
-## 📧 Contact Form
-The contact form is powered by EmailJS. To set up your own:
-1. Create an account at [EmailJS](https://www.emailjs.com/)
-2. Create a service and template
-3. Replace the service ID and template ID in the JavaScript code
-4. Update the public key in the emailjs.init() function
-
 ## 📈 Performance Features
 - Optimized images and animations
 - Minimal external dependencies
