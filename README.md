@@ -1,6 +1,6 @@
 # Prasad's Portfolio 🚀
 
-A modern, responsive personal portfolio website showcasing my projects, skills, and professional experience.
+A modern, responsive personal portfolio website showcasing my projects, skills and professional experience.
 
 ## 🌐 Live Demo
 [View Live Portfolio](https://prasadsapkal.netlify.app/)
