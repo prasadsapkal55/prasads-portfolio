@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 # Prasad's Portfolio 🚀
 
 A modern, responsive personal portfolio website showcasing my projects, skills, and professional experience.
 
 ## 🌐 Live Demo
-[View Live Portfolio](https://prasadsapkal55.github.io/portfolio/) *(Replace with your GitHub Pages URL after deployment)*
-
-## 📸 Screenshots
-![Portfolio Preview](preview.png) *(Add a screenshot of your portfolio)*
+[View Live Portfolio](https://prasadsapkal.netlify.app/)
 
 ## ✨ Features
 - **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
@@ -26,43 +22,9 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
 - **Icons**: Custom SVG icons
 - **Animations**: CSS transitions and transforms
 - **Form Handling**: EmailJS for contact form
-- **Deployment**: GitHub Pages
-
-## 📂 Project Structure
-```
-portfolio/
-├── index.html              # Main HTML file
-├── style.css              # Stylesheet
-├── README.md              # Project documentation
-├── 971.jpg                # Profile image
-├── *.gif                  # Project demo GIFs
-├── *.png                  # Company logos
-├── certificates/          # Certificate images
-│   ├── JavaScript Certificate.jpg
-│   ├── Generative AI Certificate.jpg
-│   └── ...
-└── Prasad Sapkal Resume.pdf
-```
+- **Deployment**: Netlify
 
 ## 🚀 Quick Start
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/prasadsapkal55/portfolio.git
-   cd portfolio
-   ```
-
-2. **Open in browser**
-   ```bash
-   # Open index.html in your preferred browser
-   open index.html  # macOS
-   start index.html # Windows
-   ```
-
-3. **Or use Live Server** (VS Code extension)
-   - Install Live Server extension
-   - Right-click on `index.html`
-   - Select "Open with Live Server"
 
 ## 📱 Responsive Breakpoints
 - **Desktop**: 1600px+
@@ -83,15 +45,6 @@ The contact form is powered by EmailJS. To set up your own:
 3. Replace the service ID and template ID in the JavaScript code
 4. Update the public key in the emailjs.init() function
 
-## 🔧 Customization
-To customize this portfolio for your own use:
-1. Replace personal information in `index.html`
-2. Update the resume file path
-3. Replace project images and descriptions
-4. Update social media links
-5. Modify the color scheme in `style.css`
-6. Update the EmailJS configuration
-
 ## 📈 Performance Features
 - Optimized images and animations
 - Minimal external dependencies
@@ -108,7 +61,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 Author
 **Prasad Sapkal**
-- Website: [Portfolio](https://prasadsapkal55.github.io/portfolio/)
+- Website: [Portfolio](https://prasadsapkal.netlify.app/)
 - LinkedIn: [@prasad-sapkal](https://linkedin.com/in/prasad-sapkal)
 - GitHub: [@prasadsapkal55](https://github.com/prasadsapkal55)
 - Email: prasadsapkal282@gmail.com
@@ -117,7 +70,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Google Fonts for the Poppins font family
 - DevIcons for technology icons
 - EmailJS for contact form functionality
-- GitHub Pages for hosting
+- Netlify for hosting
 
 ---
 ⭐ **If you found this project helpful, please give it a star!** ⭐
