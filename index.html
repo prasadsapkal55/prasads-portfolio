@@ -663,19 +663,16 @@
             typeSpeed: 50,
         });
 
-        // Certificate Carousel functionality
         document.addEventListener('DOMContentLoaded', function () {
             let currentSlide = 0;
             const container = document.querySelector('.certificate-container');
             const dots = document.querySelectorAll('.dot');
-            const totalSlides = 8; // We have 8 certificates
+            const totalSlides = 8; 
 
             function showSlide(index) {
-                // Move the container to show the selected slide
-                const translateX = -index * 12.5; // 12.5% per slide (100% / 8 slides)
+                const translateX = -index * 12.5; 
                 container.style.transform = `translateX(${translateX}%)`;
 
-                // Update dots
                 dots.forEach(dot => dot.classList.remove('active'));
                 if (dots[index]) {
                     dots[index].classList.add('active');
@@ -692,61 +689,50 @@
                 showSlide(currentSlide);
             }
 
-            // Add click event listeners to dots
             dots.forEach((dot, index) => {
                 dot.addEventListener('click', () => goToSlide(index));
             });
 
-            // Auto-slide every 4 seconds
             setInterval(nextSlide, 4000);
 
-            // Initialize first slide
             showSlide(0);
         });
 
-        // Contact Form Logic with EmailJS
         (function () {
-            // Initialize EmailJS with your public key
-            emailjs.init("Rf7IIHcdFDFq9n75M"); // Replace with your EmailJS public key
+            emailjs.init("Rf7IIHcdFDFq9n75M"); 
         })();
 
         document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevent default form submission
+            e.preventDefault(); 
 
-            // Get form elements
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
             const messageInput = document.getElementById('message');
             const submitBtn = document.querySelector('.submit-btn');
 
-            // Get form values
             const name = nameInput.value.trim();
             const email = emailInput.value.trim();
             const message = messageInput.value.trim();
 
-            // Basic validation
             if (!name || !email || !message) {
                 showMessage('Please fill in all fields.', 'error');
                 return;
             }
 
-            // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 showMessage('Please enter a valid email address.', 'error');
                 return;
             }
 
-            // Show loading state
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
 
-            // Send email using EmailJS
             const templateParams = {
                 from_name: name,
                 from_email: email,
                 message: message,
-                to_name: 'Prasad', // Your name
+                to_name: 'Prasad', 
                 reply_to: email
             };
 
@@ -754,57 +740,44 @@
                 .then(function (response) {
                     console.log('SUCCESS!', response.status, response.text);
 
-                    // Reset button
                     submitBtn.textContent = 'Send Message';
                     submitBtn.disabled = false;
 
-                    // Show success message
                     showMessage('Thank you! Your message has been sent successfully. I\'ll get back to you soon!', 'success');
 
-                    // Reset form
                     document.getElementById('contactForm').reset();
 
                 }, function (error) {
                     console.log('FAILED...', error);
 
-                    // Reset button
                     submitBtn.textContent = 'Send Message';
                     submitBtn.disabled = false;
 
-                    // Show error message
                     showMessage('Sorry, there was an error sending your message. Please try again or contact me directly.', 'error');
                 });
         });
 
-        // Function to show success/error messages
         function showMessage(text, type) {
-            // Remove existing message if any
             const existingMessage = document.querySelector('.form-message');
             if (existingMessage) {
                 existingMessage.remove();
             }
 
-            // Create message element
             const messageDiv = document.createElement('div');
             messageDiv.className = `form-message form-message-${type}`;
             messageDiv.textContent = text;
 
-            // Insert message after the form description (p tag) and before the form
             const form = document.querySelector('#contactForm');
             const formContainer = document.querySelector('.contact-form');
 
-            // Find the paragraph (description) element
             const description = formContainer.querySelector('p');
 
-            // Insert message after the description
             if (description) {
                 description.insertAdjacentElement('afterend', messageDiv);
             } else {
-                // Fallback: insert before the form
                 formContainer.insertBefore(messageDiv, form);
             }
 
-            // Auto-remove message after 6 seconds
             setTimeout(() => {
                 if (messageDiv.parentNode) {
                     messageDiv.remove();
@@ -812,9 +785,7 @@
             }, 6000);
         }
 
-        // Smooth scroll navigation
         document.addEventListener('DOMContentLoaded', function () {
-            // Get all navigation links
             const navLinks = document.querySelectorAll('nav a[href^="#"], .footer a[href^="#"]');
 
             navLinks.forEach(link => {
@@ -825,7 +796,6 @@
                     const targetSection = document.querySelector(targetId);
 
                     if (targetSection) {
-                        // Calculate offset for fixed header
                         const headerHeight = document.querySelector('nav').offsetHeight;
                         const targetPosition = targetSection.offsetTop - headerHeight - 20;
 
@@ -837,7 +807,6 @@
                 });
             });
 
-            // Active section highlighting
             const sections = document.querySelectorAll('section[id]');
             const navItems = document.querySelectorAll('nav a[href^="#"]');
 
@@ -850,10 +819,8 @@
                     const sectionId = section.getAttribute('id');
 
                     if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                        // Remove active class from all nav items
                         navItems.forEach(item => item.classList.remove('active'));
 
-                        // Add active class to current section nav item
                         const activeNavItem = document.querySelector(`nav a[href="#${sectionId}"]`);
                         if (activeNavItem) {
                             activeNavItem.classList.add('active');
@@ -862,16 +829,12 @@
                 });
             }
 
-            // Listen for scroll events
             window.addEventListener('scroll', highlightActiveSection);
 
-            // Initial call
             highlightActiveSection();
         });
 
-        // Scroll Animation Observer
         document.addEventListener('DOMContentLoaded', function () {
-            // Create intersection observer for scroll animations
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
@@ -881,7 +844,6 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('animate');
-                        // For grid items, animate children with delay
                         if (entry.target.classList.contains('skills-grid') ||
                             entry.target.classList.contains('projects-grid')) {
                             const children = entry.target.children;
@@ -895,19 +857,16 @@
                 });
             }, observerOptions);
 
-            // Observe all elements with scroll animation classes
             const animatedElements = document.querySelectorAll('.scroll-fade, .scroll-slide-left, .scroll-slide-right, .scroll-scale, .skills-grid, .projects-grid');
             animatedElements.forEach(el => {
                 scrollObserver.observe(el);
             });
 
-            // Add scroll animation classes to project cards that might not have them
             const projectCards = document.querySelectorAll('.project-card:not(.scroll-scale)');
             projectCards.forEach(card => {
                 card.classList.add('scroll-scale');
             });
 
-            // Add scroll animation classes to skills that might not have them
             const skills = document.querySelectorAll('.skill:not(.scroll-scale)');
             skills.forEach(skill => {
                 skill.classList.add('scroll-scale');
