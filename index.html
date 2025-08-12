@@ -24,7 +24,13 @@
     <header>
         <nav>
             <div class="left">Prasad's Portfolio</div>
-            <div class="right">
+            <div class="menu-icon" id="menu-icon" aria-label="Open navigation" tabindex="0">
+                <!-- Hamburger icon -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="right" id="navbar">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#experience">Experience</a></li>
@@ -874,6 +880,46 @@
             const skills = document.querySelectorAll('.skill:not(.scroll-scale)');
             skills.forEach(skill => {
                 skill.classList.add('scroll-scale');
+            });
+        });
+        // Hamburger menu functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.getElementById('menu-icon');
+            const navbar = document.getElementById('navbar');
+            function closeNavbar(e) {
+                if (window.innerWidth <= 900 && navbar.classList.contains('show-navbar')) {
+                    if (!navbar.contains(e.target) && !menuIcon.contains(e.target)) {
+                        navbar.classList.remove('show-navbar');
+                        menuIcon.classList.remove('open');
+                        document.removeEventListener('click', closeNavbar);
+                    }
+                }
+            }
+            menuIcon.addEventListener('click', function (e) {
+                navbar.classList.toggle('show-navbar');
+                menuIcon.classList.toggle('open');
+                if (navbar.classList.contains('show-navbar')) {
+                    setTimeout(() => document.addEventListener('click', closeNavbar), 0);
+                } else {
+                    document.removeEventListener('click', closeNavbar);
+                }
+            });
+            // Optional: close navbar on nav link click (for single page nav)
+            navbar.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 900) {
+                        navbar.classList.remove('show-navbar');
+                        menuIcon.classList.remove('open');
+                        document.removeEventListener('click', closeNavbar);
+                    }
+                });
+            });
+            // Hide menu icon on resize if not mobile
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 900) {
+                    navbar.classList.remove('show-navbar');
+                    menuIcon.classList.remove('open');
+                }
             });
         });
     </script>
