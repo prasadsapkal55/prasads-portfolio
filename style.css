@@ -1,3 +1,8 @@
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s cubic-bezier(.4,2,.6,1);
+}
 /* Hamburger menu styles */
 .menu-icon {
     display: none;
@@ -1096,7 +1101,7 @@ footer .footer-rights {
     font-size: 1.5rem;
     color: blueviolet;
     margin-bottom: 10px;
-    text-align: left;
+    text-align: center;
 }
 
 .contact-form p {
